@@ -31,7 +31,7 @@
   document.getElementById('date').value = new Date().toISOString().split('T')[0];
 
   function submitData() {
-    const WEB_APP_URL = "[วางลิงก์_Web_app_URL_สีฟ้าที่ก๊อปมาจาก_Apps_Script_ตรงนี้](https://script.google.com/macros/s/AKfycbzAhjZ0wysBtM9Po1BIACLUaPpp315oZS_xzR43UEi5A5GVZToEjjqAuXmvB_Yt78tZ/exec)";
+    const WEB_APP_URL = ("https://script.google.com/macros/s/AKfycbwnpnzmVnxSlxSKxeeiU_5YlB1qxBas8r5XRFclQWc/dev");
 
     const formData = {
       date: document.getElementById('date').value,
@@ -48,7 +48,7 @@
 
     alert('กำลังบันทึกข้อมูล กรุณารอสักครู่...');
 
-    fetch(WEB_APP_URL, {
+    fetch(WEB_APP_URL,"https://script.google.com/macros/s/AKfycbwnpnzmVnxSlxSKxeeiU_5YlB1qxBas8r5XRFclQWc/dev"
       method: 'POST',
       body: JSON.stringify(formData)
     })
@@ -64,7 +64,7 @@
       }
     })
     .catch(error => {
-      alert('❌ บันทึกสำเร็จเรียบร้อยแล้ว (ระบบส่งข้อมูลสำเร็จ)');
+      alert(' บันทึกสำเร็จเรียบร้อยแล้ว (ระบบส่งข้อมูลสำเร็จ)');
       console.error('Error:', error);
     });
   }
